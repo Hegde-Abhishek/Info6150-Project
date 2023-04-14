@@ -1,0 +1,87 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  height: 3rem;
+}
+
+.btn-primary {
+  background-color: #00bfff;
+  border-color: #00bfff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.bs {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.room-card {
+  height: 350px;
+  position: relative;
+}
+
+.room-card:hover .overlay {
+  opacity: 1;
+}
+
+.room-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.room-card .overlay button {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #00bfff;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.room-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.room-card .room-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  color: #fff;
+}
+
+.room-card .room-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.room-card .room-type {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.room-card .room-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

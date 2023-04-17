@@ -1,0 +1,65 @@
+.hero-container {
+    height: 40vh;
+    background-image: url("../components/hero-3.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-text {
+    color: #fff;
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .services-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    height: 100%;
+  }
+  
+  .service-image {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .service-description {
+    font-size: 1.4rem;
+  }
+  
+  .footer-container {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .footer-text {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  

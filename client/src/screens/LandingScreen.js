@@ -54,19 +54,19 @@ function LandingScreen() {
         src="https://media.nomadicmatt.com/2019/airbnb_breakup3.jpg"
         title="Deluxe Rooms"
         description="Superplace with a stunning view of the beachside in Sunny Bournemouth"
-        price="£130/night"
+        price="$299/night"
     />
     <Card
         src="https://thespaces.com/wp-content/uploads/2017/08/Courtesy-of-Airbnb.jpg"
         title="Luxury Rooms"
         description="Enjoy the amazing sights of London with this stunning penthouse"
-        price="£350/night"
+        price="$449/night"
     />
     <Card
         src="https://media.nomadicmatt.com/2018/apartment.jpg"
         title="Single Rooms"
         description="Superhost with great amenities and a fabolous shopping complex nearby"
-        price="£70/night"
+        price="$199/night"
     />
     </div>
     </div>

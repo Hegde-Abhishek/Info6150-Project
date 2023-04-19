@@ -91,7 +91,7 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg">
         <a className="navbar-brand" href="/home">
-          MERN HOTEL BOOKING
+          THE ULTIMATE ESCAPE TO PARADISE
         </a>
         <button
           className="navbar-toggler"

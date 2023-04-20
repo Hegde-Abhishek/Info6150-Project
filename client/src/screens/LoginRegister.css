@@ -1,0 +1,9 @@
+.container-fluid{
+    background-image: url("../components/login.png");
+    background-size: cover;
+}
+
+.container-fluids{
+    background-image: url("../components/register.png");
+    background-size: cover;
+}

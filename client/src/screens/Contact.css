@@ -1,0 +1,73 @@
+/* Form styles */
+form {
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form label {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Accordion styles */
+  .accordion {
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .accordion-item:last-of-type {
+    border-bottom: none;
+  }
+  
+  .accordion-title {
+    padding: 10px;
+    background-color: #f7f7f7;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .accordion-title:hover {
+    background-color: #eee;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+  }
+
+  .cont{
+    background-image: url("../components/conatctus.png");
+  }
+  

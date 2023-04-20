@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import './LoginRegister.css'
 
 import Loader from "../components/Loader";
 import Error from "../components/Error";
@@ -13,59 +15,69 @@ function LoginScreen() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const history = useHistory();
+
   async function Login() {
     setLoading(true);
     const user = {
       email,
       password,
     };
-    //console.log(user);
     try {
       const result = (await axios.post("/api/users/login", user)).data;
-      console.log(result);
       localStorage.setItem("currentUser", JSON.stringify(result));
-      window.location.href = "/home";
+      history.push("/home");
     } catch (error) {
       console.log(error);
-      setError("Invalid Credentials");
+      setError("Invalid credentials. Please try again.");
     }
     setLoading(false);
   }
+
   return (
-    <div>
-      {loading && <Loader></Loader>}
-
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-5 mt-5">
-          {error.length > 0 && <Error msg={error}></Error>}
-          <div className="bs">
-            <h2>Login</h2>
-
-            <input
-              type="text"
-              className="form-control"
-              placeholder="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-            <input
-              type="password"
-              className="form-control"
-              placeholder="password"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
-            />
-            {loading ? (
-              <div>Login...Please Wait...</div>
-            ) : (
-              <button className="btn btn-primary mt-3" onClick={Login}>
-                Login
-              </button>
-            )}
+    <div className="container-fluid vh-100">
+      <div className="row h-100 justify-content-center align-items-center">
+        <div className="col-md-4">
+          <div className="card shadow">
+            <div className="card-body">
+              <h2 className="mb-4">Log in to your account</h2>
+              {error && <Error msg={error} />}
+              <form onSubmit={(e) => e.preventDefault()}>
+                <div className="form-group">
+                  <label htmlFor="email">Email address</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
+                {loading ? (
+                  <Loader />
+                ) : (
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-block"
+                    onClick={Login}
+                  >
+                    Log in
+                  </button>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </div>

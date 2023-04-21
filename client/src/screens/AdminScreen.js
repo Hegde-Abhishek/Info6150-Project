@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
-
 import { Tabs } from "antd";
 import AdminBookingScreen from "./AdminBookingScreen";
 import AdminRoomScreen from "./AdminRoomScreen";
 import AdminUserScreen from "./AdminUserScreen";
 import AdminAddRoomScreen from "./AdminAddRoomScreen";
+import "./AdminScreen.css";
+
 const { TabPane } = Tabs;
+
 function callback(key) {
   console.log(key);
 }
+
 function AdminScreen() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -19,20 +22,20 @@ function AdminScreen() {
   }, []);
 
   return (
-    <div className="ml-3 mt-3 mr-3 bs">
+    <div className="admin-screen-container">
       <h1 className="text-center">Admin Panel</h1>
-      <Tabs defaultActiveKey="1" onChange={callback}>
+      <Tabs defaultActiveKey="1" onChange={callback} className="admin-tabs">
         <TabPane tab="Bookings" key="1">
-          <AdminBookingScreen></AdminBookingScreen>
+          <AdminBookingScreen />
         </TabPane>
         <TabPane tab="Rooms" key="2">
-          <AdminRoomScreen></AdminRoomScreen>
+          <AdminRoomScreen />
         </TabPane>
         <TabPane tab="Add Room" key="3">
-          <AdminAddRoomScreen></AdminAddRoomScreen>
+          <AdminAddRoomScreen />
         </TabPane>
         <TabPane tab="Users" key="4">
-          <AdminUserScreen></AdminUserScreen>
+          <AdminUserScreen />
         </TabPane>
       </Tabs>
     </div>

@@ -32,6 +32,7 @@ function App() {
         <Route path="/admin" exact component={AdminScreen} />
         <Route path="/services" exact component={ServicesScreen} />
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

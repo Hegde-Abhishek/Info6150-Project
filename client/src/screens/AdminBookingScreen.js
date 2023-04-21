@@ -12,16 +12,16 @@ function AdminBookingScreen() {
 
   const columns = [
     {
-      title: "transactionid",
+      title: "Transaction ID",
       dataIndex: "transactionid",
       key: "transactionid",
     },
-    { title: "roomid", dataIndex: "roomid", key: "roomid" },
-    { title: "room", dataIndex: "room", key: "room" },
-    { title: "fromdate", dataIndex: "fromdate", key: "fromdate" },
-    { title: "todate", dataIndex: "todate", key: "todate" },
+    { title: "Room ID", dataIndex: "roomid", key: "roomid" },
+    { title: "Room", dataIndex: "room", key: "room" },
+    { title: "From Date", dataIndex: "fromdate", key: "fromdate" },
+    { title: "To Date", dataIndex: "todate", key: "todate" },
     {
-      title: "status",
+      title: "Status",
       dataIndex: "status",
       key: "status",
       render: (status) => (
@@ -52,17 +52,23 @@ function AdminBookingScreen() {
   useEffect(() => {
     fetchMyData();
   }, []);
+
   return (
-    <div className="row">
-      {loading ? (
-        <Loader></Loader>
-      ) : error.length > 0 ? (
-        <Error msg={error}></Error>
-      ) : (
-        <div className="col-md-12">
-          <Table columns={columns} dataSource={bookings} />
+    <div className="container-fluid mt-3">
+      <div className="row justify-content-center">
+        <div className="col-lg-10">
+          <h2 className="text-center mb-4">Booking Records</h2>
+          {loading ? (
+            <Loader />
+          ) : error.length > 0 ? (
+            <Error msg={error} />
+          ) : (
+            <div className="table-responsive">
+              <Table columns={columns} dataSource={bookings} />
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 }

@@ -40,6 +40,19 @@ function AdminRoomScreen() {
     setLoading(false);
   }
 
+  // async function deleteFun() {
+  //   setError("");
+  //   setLoading(true);
+  //   try {
+  //     const data = (await axios.delete("/api/rooms/deleteroom/${_id}")).data;
+  //     setRooms(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //     setError(error);
+  //   }
+  //   setLoading(false);
+  // }
+// 
   useEffect(() => {
     fetchMyData();
   }, []);
@@ -57,6 +70,13 @@ function AdminRoomScreen() {
             >
               {loading ? "Refreshing..." : "Refresh"}
             </button>
+            {/* <button
+              className="btn btn-success"
+              onClick={deleteFun}
+              disabled={loading}
+            >
+              {loading ? "Deleting..." : "Delete"}
+            </button> */}
           </div>
           {error && <Error msg={error} />}
           {loading ? (

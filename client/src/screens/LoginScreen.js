@@ -26,7 +26,7 @@ function LoginScreen() {
     try {
       const result = (await axios.post("/api/users/login", user)).data;
       localStorage.setItem("currentUser", JSON.stringify(result));
-      history.push("/home");
+      history.push("/");
     } catch (error) {
       console.log(error);
       setError("Invalid credentials. Please try again.");

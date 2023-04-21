@@ -62,4 +62,24 @@ router.post("/addroom", async (req, res) => {
   }
 });
 
+// router.delete("/deleteroom/:id", async (req, res) => {
+//   try {
+//     const roomId = req.params.id;
+//     const room = await Room.findById(roomId);
+//     if (!room) {
+//       console.log(room)
+//       return res.status(404).json({ message: "Room not found" });
+//     }
+//     if (room.currentbookings.length > 0) {
+//       return res.status(403).json({ message: "Cannot delete a room with active bookings" });
+//     }
+//     await Room.findByIdAndDelete(roomId);
+//     res.json({ message: "Room deleted successfully" });
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json({ message: "Something went wrong" });
+//   }
+// });
+
+
 module.exports = router;

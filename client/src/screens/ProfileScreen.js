@@ -12,6 +12,8 @@ function ProfileScreen() {
   useEffect(() => {
     if (!user) {
       window.location.href = "/login";
+    } else if (user.isAdmin) {
+      window.location.href = "/admin"
     }
   }, []);
 

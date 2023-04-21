@@ -171,7 +171,6 @@ function AdminAddRoomScreen() {
         >
           <Select placeholder="Select a room type" allowClear className="my-input">
             <Option value="delux">Delux</Option>
-            <Option value="non-delux">Non-Delux</Option>
             <Option value="single">Single</Option>
             <Option value="luxury">Luxury</Option>
           </Select>

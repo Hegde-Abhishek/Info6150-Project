@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Accordion, Card, Form, Button } from "react-bootstrap";
 import Success from "../components/Success"
-import "./Contact.css"
+// import "./Contact.css"
 
 function ContactPage() {
   const [name, setName] = useState("");

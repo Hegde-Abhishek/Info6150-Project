@@ -1,10 +1,13 @@
 import React from "react";
 import Card from "../components/ServiceCard";
+import Cards from "../components/Card"
 import Image from "../components/ER.jpg";
 import Img from "../components/BD.jpg";
 import GymImg from "../components/mmm.jpg"
+import Rest from "../components/img.jpeg"
 import "./ServicesScreen.css";
 import { useState } from "react";
+import { Row, Col } from 'react-bootstrap';
 
   const services = [
     {
@@ -81,6 +84,40 @@ import { useState } from "react";
     ))}
   </div>
 </section>
+
+<section className="spad">
+  <div className="container">
+    <Row>
+      <Col lg={6}>
+        <div className="about-text">
+          <div className="section-title">
+            <span>Explore our</span>
+            <h2>Restaurant and Bar</h2>
+          </div>
+          <p className="f-para">Indulge in delectable cuisine from around the world at our elegant restaurant, where our chefs prepare each dish with the utmost care and attention to detail. Or, if you're in the mood for a refreshing cocktail or beverage, visit our stylish bar and let our skilled bartenders craft the perfect drink for you.</p>
+          <a href="#" className="primary-btn about-btn">Read More</a>
+        </div>
+      </Col>
+      <Col lg={6}>
+        <div className="about-pic">
+          <Row>
+            <Col sm={6}>
+            <Cards
+        src={Rest}
+        title="Top Chefs"/>
+            </Col>
+            <Col sm={6}>
+            <Cards
+        src="https://media.nomadicmatt.com/2018/apartment.jpg"
+        title="Great Bar"/>
+            </Col>
+          </Row>
+        </div>
+      </Col>
+    </Row>
+  </div>
+</section>
+
 
       {/* <footer className="footer-container">
         <p className="footer-text">&copy; The Paradise Resort 2023</p>

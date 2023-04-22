@@ -1,9 +1,46 @@
-# The Paradise 
-# Info6150 - Group Assignment
+THE Paradise Resort
 
---> The website serves as a representation of The Paradise, our resort, and the range of services we offer.
---> We have used various bootstrap elements like, header&footer, navigation bar, Hero section, grids, cards with hover effects, carousel select, dropdown, datepicker, anf other form elements, etc.
---> The website is responsive and compatible to any device.
+MongoDB Express React NodeJs
 
-Clone the project --> open code in vs code --> open live server on homepage.html.
+Run Server [NodeJs at server folder]
 
+DB Configuration
+
+Please edit db.js mongodb connection string 
+
+Stripe API Key Configuration
+
+
+start the server
+
+npm package used:
+- nodemon
+- mongoose
+- express
+- router
+- moment
+- stripe
+
+
+execute the following command in the client and src terminal
+1)npm i
+2)npm start
+
+npm package use:
+
+- antd
+- aos
+- axios
+- moment
+- react-bootstrap
+- react-router-dom
+- react-stripe-checkout
+- sweetalert2
+
+Sample Screenshots
+
+
+Admin password
+username: admin@gmail.com
+
+password: 123456

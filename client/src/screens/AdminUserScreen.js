@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Table, Tag, Space } from "antd";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 import Loader from "../components/Loader";
 import Error from "../components/Error";
@@ -47,22 +48,38 @@ function AdminUserScreen() {
     }
     setLoading(false);
   }
+
   useEffect(() => {
     fetchMyData();
   }, []);
 
   return (
-    <div className="row">
+    <Container>
+      {/* <Row className="my-3">
+        <Col>
+          <h1>Admin User Screen</h1>
+        </Col>
+      </Row> */}
+
       {loading ? (
-        <Loader></Loader>
+        <Loader />
       ) : error.length > 0 ? (
-        <Error msg={error}></Error>
+        <Error msg={error} />
       ) : (
-        <div className="col-md-12">
-          <Table columns={columns} dataSource={users} />
-        </div>
+        <Row className="my-3">
+          <Col>
+            <Table columns={columns} dataSource={users} />
+          </Col>
+        </Row>
       )}
-    </div>
+      <Row className="my-3">
+        <Col>
+          <Button variant="primary" onClick={fetchMyData}>
+            Refresh Data
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

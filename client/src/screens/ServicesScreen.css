@@ -1,0 +1,117 @@
+.hero-container {
+    height: 40vh;
+    background-image: url("../components/hero-3.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-text {
+    color: #fff;
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .services-container {
+    background-image: url("../components/bg.jpg");
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .services-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    height: 100%;
+  }
+  
+  .service-image {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .service-description {
+    font-size: 1.4rem;
+  }
+  
+  .footer-container {
+    background-color: #222;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .footer-text {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .about-text {
+	text-align: center;
+	padding: 0 35px;
+}
+.about-text p {
+	color: #595960;
+	font-weight: 500;
+}
+.about-text p.f-para {
+	margin-bottom: 10px;
+}
+.about-text p.s-para {
+	margin-bottom: 35px;
+}
+.about-text .about-btn {
+	color: #19191a;
+}
+.about-pic Card {
+	min-width: 100%;
+}
+
+.section-title {
+	text-align: center;
+	margin-bottom: 22px;
+}
+.section-title span {
+	font-size: 14px;
+	color: #d04203;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.section-title h2 {
+	font-size: 44px;
+	color: #19191a;
+	line-height: 58px;
+	margin-top: 10px;
+}
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.spad {
+    background-image: url(../components/bgg.jpg);
+    background-size: cover;
+    padding-top: 20px;
+	padding-bottom: 20px;
+    height: 500px;
+}
+  

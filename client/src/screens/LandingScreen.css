@@ -6,6 +6,7 @@
 
 .landing{
     background-image: url("./pexels-photo-60217.jpeg");
+    background-size: cover;
 }
 
 .btn-primary.landingButton {

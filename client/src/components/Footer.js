@@ -16,26 +16,26 @@ const Content = styled.div`
 `;
 
 const ContactInfo = styled.div`
-  display: flex;
+  display: contents;
   align-items: center;
 `;
 
 const Icon = styled.span`
-  margin-right: 0.5rem;
+  margin-right: -70px;
 `;
 
 const Footer = () => {
   return (
     <Container>
       <Content>
-        <div>© 2023 Resort Management System. All Rights Reserved.</div>
+        <div>&copy; The Paradise Resort 2023. All Rights Reserved.</div>
         <ContactInfo>
           <Icon><FaPhone /></Icon>
-          <div>1-800-123-4567</div>
+          <div>1-857-123-4567</div>
           <Icon><FaEnvelope /></Icon>
-          <div>reservations@resort.com</div>
+          <div>theparadise@gmail.com</div>
           <Icon><FaMapMarkerAlt /></Icon>
-          <div>123 Main St, Anytown, USA</div>
+          <div>123 Main St, Boston, USA</div>
         </ContactInfo>
       </Content>
     </Container>

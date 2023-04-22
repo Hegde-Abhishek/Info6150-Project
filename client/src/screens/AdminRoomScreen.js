@@ -12,19 +12,19 @@ function AdminRoomScreen() {
 
   const columns = [
     {
-      title: "roomid",
+      title: "Room ID",
       dataIndex: "_id",
       key: "_id",
     },
     {
-      title: "name",
+      title: "Name",
       dataIndex: "name",
       key: "name",
     },
-    { title: "maxcount", dataIndex: "maxcount", key: "maxcount" },
-    { title: "phonenumber", dataIndex: "phonenumber", key: "phonenumber" },
-    { title: "rentperday", dataIndex: "rentperday", key: "rentperday" },
-    { title: "type", dataIndex: "type", key: "type" },
+    { title: "Max Count", dataIndex: "maxcount", key: "maxcount" },
+    { title: "Phone Number", dataIndex: "phonenumber", key: "phonenumber" },
+    { title: "Rent Per Day", dataIndex: "rentperday", key: "rentperday" },
+    { title: "Type", dataIndex: "type", key: "type" },
   ];
 
   async function fetchMyData() {
@@ -45,23 +45,27 @@ function AdminRoomScreen() {
   }, []);
 
   return (
-    <div className="row">
-      {loading ? (
-        <Loader></Loader>
-      ) : error.length > 0 ? (
-        <Error msg={error}></Error>
-      ) : (
-        <>
-          <div className="col md-12">
-            <button className="btn btn-success" onClick={fetchMyData}>
-              Refresh
+    <div className="container-fluid mt-3">
+      <div className="row justify-content-center">
+        <div className="col-md-10">
+          <div className="d-flex justify-content-between align-items-center">
+            <h2>Room List</h2>
+            <button
+              className="btn btn-success"
+              onClick={fetchMyData}
+              disabled={loading}
+            >
+              {loading ? "Refreshing..." : "Refresh"}
             </button>
           </div>
-          <div className="col-md-12">
+          {error && <Error msg={error} />}
+          {loading ? (
+            <Loader />
+          ) : (
             <Table columns={columns} dataSource={rooms} />
-          </div>
-        </>
-      )}
+          )}
+        </div>
+      </div>
     </div>
   );
 }

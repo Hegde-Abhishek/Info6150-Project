@@ -90,7 +90,7 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
-        <a className="navbar-brand" href="/home">
+        <a className="navbar-brand" href="/">
           THE ULTIMATE ESCAPE TO PARADISE
         </a>
         <button

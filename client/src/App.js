@@ -12,6 +12,7 @@ import AdminScreen from "./screens/AdminScreen";
 import LandingScreen from "./screens/LandingScreen";
 import ServicesScreen from "./screens/ServicesScreen";
 import Footer from "./components/Footer";
+import ContactUs from "./screens/Contact"
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/profile" exact component={ProfileScreen} />
         <Route path="/bookings" exact component={ProfileScreen} />
         <Route path="/admin" exact component={AdminScreen} />
+        <Route path="/contact" exact component={ContactUs} />
         <Route path="/services" exact component={ServicesScreen} />
       </BrowserRouter>
       <Footer />
